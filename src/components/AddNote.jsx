@@ -17,7 +17,7 @@ export default function AddNote ({handleAddNote, handleAddButton, setSearchText}
         } else {
             alert("Please enter some text")
         }
-    }
+    } 
     return (
     <div className="note new">
         <textarea 

@@ -9,7 +9,6 @@ body {
 }
 
 .note {
-  background-color: #fef68a;
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
@@ -18,6 +17,44 @@ body {
   justify-content: space-between;
   white-space: pre-wrap;
   word-break: break-all;
+}
+
+.yellow {
+  background-color: #fef68a;
+}
+
+.red {
+  background-color: rgb(216, 133, 133);
+}
+
+.green {
+  background-color: rgb(166, 199, 166);
+}
+
+.blue {
+  background-color: rgb(126, 126, 219);
+}
+
+.red-bubble {
+  background-color: rgb(216, 133, 133);
+}
+
+.yellow-bubble {
+  background-color: #fef68a;
+}
+
+.green-bubble {
+  background-color: rgb(166, 199, 166);
+}
+
+.blue-bubble {
+  background-color: rgb(126, 126, 219);
+}
+
+.select-color {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .editingNote {

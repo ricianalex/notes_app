@@ -28,10 +28,13 @@ function addNote(text) {
     id: nanoid(),
     text: text,
     date: date.toLocaleDateString(),
-    editing: false
+    editing: false,
+    color: "yellow"
   }
   setNotes(oldNotes => [newNote, ...oldNotes])
 }
+
+console.log(notes)
 
 function deleteNote(event, noteId) {
   setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
@@ -73,6 +76,14 @@ function editingNote(event, noteID) {
 
 }
 
+function changeColor(event, noteId) {
+  setNotes(oldNotes => oldNotes.map(note => {
+    return note.id === noteId 
+      ? { ...note, color: event.target.value }
+      : note
+  }))
+}
+
 function toggleAddButton() {
   setShowAddButton(prevState => !prevState)
 }
@@ -87,6 +98,7 @@ function toggleAddButton() {
           handleAddNote={addNote}
           handleDeleteNote={deleteNote}
           editingNote={editingNote}
+          changeColor={changeColor}
           handleAddButton={toggleAddButton}
           showAddButton={showAddButton}
           toggleEdit={toggleEdit}
