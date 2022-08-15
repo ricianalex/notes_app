@@ -2,13 +2,13 @@ import bin from "../icons/bin.png"
 import { useState } from "react"
 
 export default function Note({id, text, date, color, handleDeleteNote, editingNote, changeColor, editingStatus, toggleEdit}) {
-    const charLimit = 200
+    const charLimit = 1000
 
 
 
     return (
         <div className={editingStatus ? "editingNote" : `note ${color}`}>
-            <span>{editingStatus ? <textarea onChange={(event) => editingNote(event, id)} cols="10" rows="8" value={text} className="textarea"></textarea> : text}</span>
+            <span>{editingStatus ? <textarea onChange={(event) => editingNote(event, id)} cols="10" rows="8" value={text} maxlength="1000" className="textarea"></textarea> : text}</span>
             <div className="note-footer">
                 <small>{editingStatus ? charLimit - text.length + " Remaining" : date}</small>
                 <select

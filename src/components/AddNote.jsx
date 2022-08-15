@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function AddNote ({handleAddNote, handleAddButton, setSearchText}) {
     const [noteText, setNoteText] = useState('')
-    const charLimit = 200
+    const charLimit = 1000
 
     function handleChange(event) {
         setNoteText(event.target.value)
@@ -24,7 +24,7 @@ export default function AddNote ({handleAddNote, handleAddButton, setSearchText}
             cols="10" 
             rows="8"
             placeholder="Type to add a note..."    
-            maxlength="200"
+            maxlength="1000"
             value={noteText}
             onChange={handleChange}
         ></textarea>
