@@ -1,7 +1,7 @@
 import Note from "./Note"
 import AddNote from "./AddNote"
 
-export default function NotesList({ notes, handleAddNote, handleDeleteNote, editingNote, changeColor, handleAddButton, showAddButton, toggleEdit, setSearchText }) {
+export default function NotesList({ notes, handleAddNote, handleDeleteNote, editingNote, changeColor, handleAddButton, showAddButton, toggleEdit, setSearchText, darkMode }) {
     return (
         <div className="notes-list">
             {!showAddButton && <AddNote handleAddNote={handleAddNote} handleAddButton={handleAddButton} setSearchText={setSearchText}/>}
@@ -16,6 +16,7 @@ export default function NotesList({ notes, handleAddNote, handleDeleteNote, edit
                     editingNote={editingNote}
                     changeColor={changeColor}
                     toggleEdit={toggleEdit}
+                    darkMode={darkMode}
                 />)
                 )}
         </div>

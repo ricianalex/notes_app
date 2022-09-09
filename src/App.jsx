@@ -40,6 +40,8 @@ function deleteNote(event, noteId) {
   setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
 }
 
+// THIS WAS A TRY AT MAKING THE RECENT EDITED NOTE GOING TO THE TOP - IT DOES NOT WORK, BUT IT'S CLOSE
+
 // function editingNote(event, noteID) {
 //   if (event.target.value.trim().length > 0) {
 //     setNotes(oldNotes => {
@@ -90,9 +92,9 @@ function toggleAddButton() {
 
   return (
     <div className={darkMode ? "container dark-mode" : "container"}>
-        <Header handleToggleDarkMode={setDarkMode}/>
+        <Header handleToggleDarkMode={setDarkMode} darkMode={darkMode}/>
         <Search handleSearchNote={setSearchText} Text={searchText}/>
-        {showAddButton && <button className="add-btn" onClick={toggleAddButton}>Add note</button> }
+        {showAddButton && <button className="add-btn" onClick={toggleAddButton}>Add a note</button> }
         <NotesList 
           notes={notes.filter(note => note.text.toLocaleLowerCase().includes(searchText))}
           handleAddNote={addNote}
@@ -103,6 +105,7 @@ function toggleAddButton() {
           showAddButton={showAddButton}
           toggleEdit={toggleEdit}
           setSearchText={setSearchText}
+          darkMode={darkMode}
         />
     </div>
   )

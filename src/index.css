@@ -16,7 +16,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
-  word-break: break-all;
+  overflow-wrap: break-word;
+  -webkit-box-shadow: 2px 5px 15px 1px rgba(0,0,0,0.44); 
+  box-shadow: 2px 5px 15px 1px rgba(0,0,0,0.44);
 }
 
 .yellow {
@@ -88,6 +90,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   min-height: 100vh;
+  transition: 0.5s;
 }
 
 .notes-list {
@@ -128,9 +131,11 @@ textarea:focus {
   background-color: #e1e1e1;
   border: none;
   border-radius: 15px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 10px;
   margin-left: auto;
+  transition: 0.3s;
+  font-weight: 700;
 }
 
 .add-btn:hover {
@@ -168,6 +173,7 @@ input:focus {
 
 .dark-mode {
   background-color: rgb(24, 23, 23);
+  transition: 0.5s;
 }
 
 .dark-mode h1 {
