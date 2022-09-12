@@ -24,7 +24,7 @@ export default function Note({id, text, date, color, handleDeleteNote, editingNo
                     <option value="blue" className="blue-bubble">Blue</option>
                 </select>}
                 <button onClick={() => toggleEdit(id)} className="save" >{editingStatus ? "Save" : "Edit"}</button>
-                <img src={bin} width="10 em" className="delete-icon" onClick={(event) => handleDeleteNote(event, id)}/>
+                <img src={bin} width="17 em" className="delete-icon" onClick={(event) => handleDeleteNote(event, id)}/>
             </div>
         </div>
     )
