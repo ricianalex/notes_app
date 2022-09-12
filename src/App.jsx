@@ -12,7 +12,7 @@ const [searchText, setSearchText] = useState("")
 
 const [darkMode, setDarkMode] = useState(() => JSON.parse(localStorage.getItem('darkMode')) || false)
 
-const [showAddButton, setShowAddButton] = useState(true)
+const [showAddButton, setShowAddButton] = useState(false)
 
 useEffect(function() {
   localStorage.setItem('notes', JSON.stringify(notes))
