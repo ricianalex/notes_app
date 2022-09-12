@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Karla', sans-serif;
+  position: relative;
 }
 
 .note {
@@ -137,6 +138,9 @@ textarea:focus {
   margin-left: auto;
   transition: 0.3s;
   font-weight: 700;
+  font-size: 1rem;
+  -webkit-box-shadow: 2px 5px 15px 1px rgba(0,0,0,0.44); 
+  box-shadow: 2px 5px 15px 1px rgba(0,0,0,0.44);
 }
 
 .add-btn:hover {
@@ -153,7 +157,7 @@ textarea:focus {
   align-items: center;
   background-color: rgb(233, 233, 233);
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px 5px;
   margin-bottom: 1.5em;
 }
 
@@ -184,8 +188,9 @@ input:focus {
 
 @media screen and (max-width: 500px) {
   .add-btn {
-    position: absolute;
+    position: fixed;
     right: 20px;
-    bottom: 40px;
+    bottom: 30px;
   }
+
 }

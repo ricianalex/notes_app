@@ -12,7 +12,7 @@ const [searchText, setSearchText] = useState("")
 
 const [darkMode, setDarkMode] = useState(() => JSON.parse(localStorage.getItem('darkMode')) || false)
 
-const [showAddButton, setShowAddButton] = useState(false)
+const [showAddButton, setShowAddButton] = useState(true)
 
 useEffect(function() {
   localStorage.setItem('notes', JSON.stringify(notes))
@@ -94,7 +94,7 @@ function toggleAddButton() {
     <div className={darkMode ? "container dark-mode" : "container"}>
         <Header handleToggleDarkMode={setDarkMode} darkMode={darkMode}/>
         <Search handleSearchNote={setSearchText} Text={searchText}/>
-        {showAddButton && <button className="add-btn" onClick={toggleAddButton}>Add a note</button> }
+        {showAddButton && <button className="add-btn" onClick={toggleAddButton}> Add a note</button> }
         <NotesList 
           notes={notes.filter(note => note.text.toLocaleLowerCase().includes(searchText))}
           handleAddNote={addNote}
